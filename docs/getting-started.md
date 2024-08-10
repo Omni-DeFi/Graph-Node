@@ -121,7 +121,7 @@ We point out a few important facts from this example to supplement the [subgraph
 The ABI JSON file must contain the correct ABI to source all the events or any contract state you wish to ingest into the Graph Node. There are a few ways to obtain an ABI for the contract:
 * If you are building your own project, you likely have access to your most current ABIs of your smart contracts.
 * If you are building a subgraph for a public project, you can download that project to your computer and generate the ABI by using [`truffle compile`](https://truffleframework.com/docs/truffle/overview) or `solc` to compile. This creates the ABI files that you can then transfer to your subgraph `/abi` folder.
-* Sometimes, you can also find the ABI on [Etherscan](https://etherscan.io), but this is not always reliable because the uploaded ABI may be out of date. Make sure you have the correct ABI. Otherwise, you will not be able to start a Graph Node.
+* Sometimes, you can also find the ABI on [Etherscan](https://etherscan.io) or [Blockscout](https://blockscout.com), but this is not always reliable because the uploaded ABI may be out of date. Make sure you have the correct ABI. Otherwise, you will not be able to start a Graph Node.
 
 If you run into trouble here, double-check the ABI and ensure that the event signatures exist *exactly* as you expect them by examining the smart contract code you are sourcing. Also, note with the ABI, you only need the array for the ABI. Compiling the contracts locally results in a `.json` file that contains the complete ABI nested within the `.json` file under the key `abi`.
 
